@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   View,
   Text,
@@ -7,6 +7,8 @@ import {
   TextInput,
   StyleSheet,
 } from "react-native";
+import { Feather } from "@expo/vector-icons";
+import { AuthContext } from "../../contexts/AuhtContext";
 
 import { useNavigation } from "@react-navigation/native";
 
@@ -16,6 +18,8 @@ import { api } from "../../services/api";
 
 export default function Dashboard() {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList>>();
+
+  const { signOut } = useContext(AuthContext);
 
   const [number, setNumber] = useState("");
 
@@ -40,6 +44,9 @@ export default function Dashboard() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <TouchableOpacity onPress={signOut} style={styles.buttonLogout}>
+        <Feather name="log-out" color="#ff3f4b" size={35} />
+      </TouchableOpacity>
       <Text style={styles.title}>Novo Pedido</Text>
       <TextInput
         placeholder="Número da mesa"
@@ -93,5 +100,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#101026",
     fontWeight: "bold",
+  },
+  buttonLogout: {
+    position: "absolute",
+    right: 30,
+    top: 90,
   },
 });
