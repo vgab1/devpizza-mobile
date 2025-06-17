@@ -59,7 +59,7 @@ Este repositório é dedicado ao **aplicativo mobile**, desenvolvido com **React
 - Backend do projeto DevPizza em execução local ou hospedado
 
 ### Passos para Executar
-
+```bash
 Clone o repositório:  
 git clone https://github.com/vgab1/devpizza-mobile
 cd devpizza-mobile
@@ -86,7 +86,7 @@ Copiar
 Editar
 
 Abra o app no dispositivo ou emulador com o **Expo Go** ou Android Studio/iOS Simulator.
-
+```
 ## Links Úteis
 
 - Repositório do Backend: [https://github.com/vgab1/devpizza-backend](https://github.com/vgab1/devpizza-backend)
