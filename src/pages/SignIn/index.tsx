@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 32,
     paddingHorizontal: 14,
-    marginBottom: 250,
+    marginBottom: 80,
   },
 
   input: {
